@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Inventory_Course_.Shared
+namespace Inventory_Course_.Components.Ejercicios.BlazorPages
 {
     #line hidden
     using System;
@@ -82,7 +82,7 @@ using Inventory_Course_.Components.Ejercicios.BlazorPages;
 #line default
 #line hidden
 #nullable disable
-    public partial class SurveyPrompt : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Form001 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,11 +90,23 @@ using Inventory_Course_.Components.Ejercicios.BlazorPages;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 12 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Shared\SurveyPrompt.razor"
-       
-    // Demonstrates how a parent component can supply parameters
+#line 8 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Ejercicios\BlazorPages\Form001.razor"
+      
     [Parameter]
-    public string Title { get; set; }
+    public string Message { get; set; }
+
+    string message = "Un contenido";
+    string text;
+
+    protected override async Task OnInitializedAsync()
+    {
+        message = Message;
+    }
+
+    private void ChangeText()
+    {
+        message = text;
+    }
 
 #line default
 #line hidden
