@@ -13,13 +13,10 @@ namespace Entities
         
         [Required]
         public int PartialQuantity { get; set; }
-        
-        [Required]
-        [StringLength(10)]
+                
         public string ProductId { get; set; }
         
-        [Required]
-        [StringLength(50)]
-        public string WherehouseId { get; set; }
+        
+        public ProductEntity Product { get; set; }
     }
 }
