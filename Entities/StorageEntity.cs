@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Entities
@@ -18,5 +20,11 @@ namespace Entities
         
         
         public ProductEntity Product { get; set; }
+
+        public string WarehouseId { get; set; }
+
+        public WarehouseEntity Warehouse { get; set; }
+
+        public ICollection<InOutEntity> InputOutputs { get; set; }
     }
 }
