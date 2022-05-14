@@ -18,8 +18,7 @@ namespace Entities
         [Required]
         public bool IsInput { get; set; }
         
-        [Required]
-        [StringLength(50)]
         public string StorageId { get; set; }
+        public StorageEntity Storage { get; set; }
     }
 }

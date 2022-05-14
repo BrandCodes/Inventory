@@ -80,6 +80,13 @@ using Inventory_Course_.Components.Ejercicios.BlazorPages;
 #line hidden
 #nullable disable
 #nullable restore
+#line 11 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\_Imports.razor"
+using Inventory_Course_.Components.Ejercicios.Forms;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Pages\FetchData.razor"
 using Inventory_Course_.Data;
 

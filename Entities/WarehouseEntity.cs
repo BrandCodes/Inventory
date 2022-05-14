@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Entities
 {
@@ -15,5 +16,7 @@ namespace Entities
         [Required]
         [StringLength(200)]
         public string WarehouseAddress { get; set; }
+
+        public ICollection<StorageEntity> Storages { get; set; }
     }
 }

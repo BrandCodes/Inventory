@@ -52,3 +52,5 @@ C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y 
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Inventory(Course).csproj.CopyComplete
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Ejercicios\BlazorPages\Form001.razor.g.cs
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\Ejercicios\BlazorPages\Form001.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Ejercicios\Forms\Form002.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\Ejercicios\Forms\Form002.razor.g.cs

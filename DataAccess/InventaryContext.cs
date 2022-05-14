@@ -13,5 +13,14 @@ namespace DataAccess
         public DbSet<InOutEntity> InOuts { get; set; }
         public DbSet<WarehouseEntity> Warehouse { get; set; }
         public DbSet<StorageEntity> Storages { get; set; }
+
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            if (!options.IsConfigured)
+            {
+                options.UseSqlServer("Server=localhost; Database=Inventory; Trusted_Connection=True”");
+            }
+        }
     }
 }
