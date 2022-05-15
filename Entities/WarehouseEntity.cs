@@ -6,7 +6,7 @@ namespace Entities
     public class WarehouseEntity
     {
         [Key]
-        [StringLength(50)]
+        [StringLength(maximumLength: 50)]
         public string WarehouseId { get; set; }
         
         [Required]

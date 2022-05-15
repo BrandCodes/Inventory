@@ -4,14 +4,16 @@ using DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(InventaryContext))]
-    partial class InventaryContextModelSnapshot : ModelSnapshot
+    [Migration("20220515035342_AddData")]
+    partial class AddData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -92,8 +94,8 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Entities.ProductEntity", b =>
                 {
                     b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(50)")
-                        .HasMaxLength(50);
+                        .HasColumnType("nvarchar(10)")
+                        .HasMaxLength(10);
 
                     b.Property<string>("CategoryId")
                         .HasColumnType("nvarchar(450)");
@@ -148,7 +150,7 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("WarehouseId")
                         .HasColumnType("nvarchar(50)");
@@ -185,13 +187,13 @@ namespace DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            WarehouseId = "c44a0b22-313d-4c34-b720-54d3f573c592",
+                            WarehouseId = "c266b3ed-5be1-40c0-833c-b962e0d1f233",
                             WarehouseAddress = "4627 Rowes Lane. Louisville, Ky",
                             WarehouseName = "Bodega Central"
                         },
                         new
                         {
-                            WarehouseId = "323e50a1-40b6-4ca1-8adf-2b41c884a0f9",
+                            WarehouseId = "c392fdb9-6f1c-494b-987f-adf057bed01a",
                             WarehouseAddress = "4085 North Street. Salt Lake City, Utah",
                             WarehouseName = "Bodega Norte"
                         });

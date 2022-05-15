@@ -6,15 +6,15 @@ namespace Entities
     public class ProductEntity
     {
         [Key]
-        [StringLength(10)]
+        [StringLength(maximumLength: 50)]
         public string ProductId { get; set; }
 
         [Required]
         [StringLength(100)]
-        public int ProductName { get; set; }
+        public string ProductName { get; set; }
         
         [StringLength(600)]
-        public int ProductDescription { get; set; }
+        public string ProductDescription { get; set; }
         
         public int TotalQuantity { get; set; }
 
