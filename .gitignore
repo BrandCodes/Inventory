@@ -4,3 +4,5 @@
 
 /.vs/Inventory(Course)/v16
 *.v2
+/Business/obj/Debug/netcoreapp3.1
+/Business/obj
