@@ -89,6 +89,13 @@ using Inventory_Course_.Components.Ejercicios.Forms;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\_Imports.razor"
+using Inventory_Course_.Components.Products;
+
+#line default
+#line hidden
+#nullable disable
     public partial class Form001 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998

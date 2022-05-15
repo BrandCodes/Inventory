@@ -89,6 +89,27 @@ using Inventory_Course_.Components.Ejercicios.Forms;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\_Imports.razor"
+using Inventory_Course_.Components.Products;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\CreateProductComponent.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\CreateProductComponent.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class CreateProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -96,6 +117,25 @@ using Inventory_Course_.Components.Ejercicios.Forms;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 32 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\CreateProductComponent.razor"
+       
+    ProductEntity oProduct = new ProductEntity();
+    List<CategoryEntity> categories = new List<CategoryEntity>();
+
+    private void SaveProduct()
+    {
+        B_Product.CreateProduct(oProduct);
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        categories = B_Category.CategoryList();
+    }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
