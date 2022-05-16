@@ -118,13 +118,31 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
+#line 34 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
        
     List<ProductEntity> products = new List<ProductEntity>();
+    List<ProductEntity> temProducts = new List<ProductEntity>();
+    List<CategoryEntity> categories = new List<CategoryEntity>();
 
     protected override async Task OnInitializedAsync()
     {
         products = B_Product.ProductList();
+        temProducts = products;
+        categories = B_Category.CategoryList();
+    }
+
+    private void CategoryChanged(ChangeEventArgs e)
+    {
+        var id = e.Value.ToString();
+
+        if (id != "n")
+        {
+            temProducts = products.Where(c => c.CategoryId == id).ToList();
+        }
+        else
+        {
+            temProducts = products;
+        }
     }
 
 #line default
