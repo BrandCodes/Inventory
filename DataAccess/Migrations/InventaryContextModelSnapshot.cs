@@ -30,38 +30,6 @@ namespace DataAccess.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            CategoryId = "ASH",
-                            CategoryName = "Aseo Hogar"
-                        },
-                        new
-                        {
-                            CategoryId = "ASP",
-                            CategoryName = "Aseo Personal"
-                        },
-                        new
-                        {
-                            CategoryId = "HGR",
-                            CategoryName = "Hogar"
-                        },
-                        new
-                        {
-                            CategoryId = "PRF",
-                            CategoryName = "Perfumería"
-                        },
-                        new
-                        {
-                            CategoryId = "SLD",
-                            CategoryName = "Salud"
-                        },
-                        new
-                        {
-                            CategoryId = "VDJ",
-                            CategoryName = "Video Juegos"
-                        });
                 });
 
             modelBuilder.Entity("Entities.InOutEntity", b =>
@@ -115,24 +83,6 @@ namespace DataAccess.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            ProductId = "ASJ-98745",
-                            CategoryId = "PRF",
-                            ProductDescription = "",
-                            ProductName = "Crema para manos marca Tersa",
-                            TotalQuantity = 0
-                        },
-                        new
-                        {
-                            ProductId = "RPT-5465879",
-                            CategoryId = "SLD",
-                            ProductDescription = "",
-                            ProductName = "Pastillas para la garganta LESUS",
-                            TotalQuantity = 0
-                        });
                 });
 
             modelBuilder.Entity("Entities.StorageEntity", b =>
@@ -181,20 +131,6 @@ namespace DataAccess.Migrations
                     b.HasKey("WarehouseId");
 
                     b.ToTable("Warehouse");
-
-                    b.HasData(
-                        new
-                        {
-                            WarehouseId = "c44a0b22-313d-4c34-b720-54d3f573c592",
-                            WarehouseAddress = "4627 Rowes Lane. Louisville, Ky",
-                            WarehouseName = "Bodega Central"
-                        },
-                        new
-                        {
-                            WarehouseId = "323e50a1-40b6-4ca1-8adf-2b41c884a0f9",
-                            WarehouseAddress = "4085 North Street. Salt Lake City, Utah",
-                            WarehouseName = "Bodega Norte"
-                        });
                 });
 
             modelBuilder.Entity("Entities.InOutEntity", b =>

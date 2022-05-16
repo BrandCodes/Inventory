@@ -36,9 +36,9 @@ namespace DataAccess.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ProductId = table.Column<string>(maxLength: 10, nullable: false),
-                    ProductName = table.Column<int>(maxLength: 100, nullable: false),
-                    ProductDescription = table.Column<int>(maxLength: 600, nullable: false),
+                    ProductId = table.Column<string>(maxLength: 50, nullable: false),
+                    ProductName = table.Column<string>(maxLength: 100, nullable: false),
+                    ProductDescription = table.Column<string>(maxLength: 600, nullable: true),
                     TotalQuantity = table.Column<int>(nullable: false),
                     CategoryId = table.Column<string>(nullable: true)
                 },

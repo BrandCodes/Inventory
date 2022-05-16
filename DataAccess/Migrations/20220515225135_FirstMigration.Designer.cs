@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccess.Migrations
 {
     [DbContext(typeof(InventaryContext))]
-    [Migration("20220514194203_FirstMigration")]
+    [Migration("20220515225135_FirstMigration")]
     partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,18 +62,19 @@ namespace DataAccess.Migrations
             modelBuilder.Entity("Entities.ProductEntity", b =>
                 {
                     b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(10)")
-                        .HasMaxLength(10);
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<string>("CategoryId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("ProductDescription")
-                        .HasColumnType("int")
+                    b.Property<string>("ProductDescription")
+                        .HasColumnType("nvarchar(600)")
                         .HasMaxLength(600);
 
-                    b.Property<int>("ProductName")
-                        .HasColumnType("int")
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)")
                         .HasMaxLength(100);
 
                     b.Property<int>("TotalQuantity")
@@ -99,7 +100,7 @@ namespace DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ProductId")
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("WarehouseId")
                         .HasColumnType("nvarchar(50)");
