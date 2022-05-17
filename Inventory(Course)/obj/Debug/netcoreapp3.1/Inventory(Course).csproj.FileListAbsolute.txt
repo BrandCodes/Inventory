@@ -96,3 +96,7 @@ C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y 
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\Products\CreateProductComponent.razor.g.cs
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\Products\ListProductsComponent.razor.g.cs
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\Products\ListProductsComponent.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Products\ListProductPage.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Pages\Products\ListProductPage.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Products\CreateProductPage.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Pages\Products\CreateProductPage.razor.g.cs

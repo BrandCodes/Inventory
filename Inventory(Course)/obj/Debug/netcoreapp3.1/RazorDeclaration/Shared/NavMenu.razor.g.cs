@@ -104,7 +104,7 @@ using Inventory_Course_.Components.Products;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Shared\NavMenu.razor"
+#line 33 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

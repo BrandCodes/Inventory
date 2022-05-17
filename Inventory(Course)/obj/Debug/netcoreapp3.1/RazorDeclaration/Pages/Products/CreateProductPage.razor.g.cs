@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Inventory_Course_.Components.Products
+namespace Inventory_Course_.Pages.Products
 {
     #line hidden
     using System;
@@ -96,48 +96,14 @@ using Inventory_Course_.Components.Products;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\CreateProductComponent.razor"
-using Entities;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\CreateProductComponent.razor"
-using Business;
-
-#line default
-#line hidden
-#nullable disable
-    public partial class CreateProductComponent : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/product/create")]
+    public partial class CreateProductPage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 34 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\CreateProductComponent.razor"
-       
-    ProductEntity oProduct = new ProductEntity();
-    List<CategoryEntity> categories = new List<CategoryEntity>();
-
-    private void SaveProduct()
-    {
-        B_Product.CreateProduct(oProduct);
-        NavManager.NavigateTo("product/list");
-    }
-
-    protected override async Task OnInitializedAsync()
-    {
-        categories = B_Category.CategoryList();
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

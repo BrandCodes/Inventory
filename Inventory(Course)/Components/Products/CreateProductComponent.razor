@@ -1,6 +1,8 @@
 ﻿@using Entities
 @using Business
 
+@inject NavigationManager NavManager
+
 <div>
     <EditForm Model="oProduct">
         <div class="form-group">
@@ -36,6 +38,7 @@
     private void SaveProduct()
     {
         B_Product.CreateProduct(oProduct);
+        NavManager.NavigateTo("product/list");
     }
 
     protected override async Task OnInitializedAsync()
