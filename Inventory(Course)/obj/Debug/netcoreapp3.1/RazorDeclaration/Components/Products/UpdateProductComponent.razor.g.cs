@@ -97,20 +97,20 @@ using Inventory_Course_.Components.Products;
 #line hidden
 #nullable disable
 #nullable restore
-#line 1 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
+#line 1 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\UpdateProductComponent.razor"
 using Entities;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
+#line 2 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\UpdateProductComponent.razor"
 using Business;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class ListProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class UpdateProductComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -118,36 +118,30 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
+#line 27 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\UpdateProductComponent.razor"
        
-    List<ProductEntity> products = new List<ProductEntity>();
-    List<ProductEntity> temProducts = new List<ProductEntity>();
+    [Parameter]
+    public string IdProduct { get; set; }
+
+    ProductEntity oProduct = new ProductEntity();
     List<CategoryEntity> categories = new List<CategoryEntity>();
 
     protected override async Task OnInitializedAsync()
     {
-        products = B_Product.ProductList();
-        temProducts = products;
         categories = B_Category.CategoryList();
+        oProduct = B_Product.ProductByID(IdProduct);
     }
 
-    private void CategoryChanged(ChangeEventArgs e)
+    private void UpdateProduct()
     {
-        var id = e.Value.ToString();
-
-        if (id != "n")
-        {
-            temProducts = products.Where(c => c.CategoryId == id).ToList();
-        }
-        else
-        {
-            temProducts = products;
-        }
+        B_Product.UpdateProduct(oProduct);
+        NavManager.NavigateTo("product/list");
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavManager { get; set; }
     }
 }
 #pragma warning restore 1591

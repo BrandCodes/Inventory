@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Inventory_Course_.Components.Products
+namespace Inventory_Course_.Pages.Products
 {
     #line hidden
     using System;
@@ -96,21 +96,8 @@ using Inventory_Course_.Components.Products;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
-using Entities;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 2 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
-using Business;
-
-#line default
-#line hidden
-#nullable disable
-    public partial class ListProductsComponent : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/product/update/{IdProduct}")]
+    public partial class UpdateProductPage : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -118,31 +105,14 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
+#line 5 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Pages\Products\UpdateProductPage.razor"
        
-    List<ProductEntity> products = new List<ProductEntity>();
-    List<ProductEntity> temProducts = new List<ProductEntity>();
-    List<CategoryEntity> categories = new List<CategoryEntity>();
+    [Parameter]
+    public string IdProduct { get; set; }
 
     protected override async Task OnInitializedAsync()
     {
-        products = B_Product.ProductList();
-        temProducts = products;
-        categories = B_Category.CategoryList();
-    }
-
-    private void CategoryChanged(ChangeEventArgs e)
-    {
-        var id = e.Value.ToString();
-
-        if (id != "n")
-        {
-            temProducts = products.Where(c => c.CategoryId == id).ToList();
-        }
-        else
-        {
-            temProducts = products;
-        }
+        IdProduct = IdProduct;
     }
 
 #line default
