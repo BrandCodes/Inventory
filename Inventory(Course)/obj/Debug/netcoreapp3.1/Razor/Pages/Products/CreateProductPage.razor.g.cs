@@ -93,6 +93,13 @@ using Inventory_Course_.Components.Products;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 13 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\_Imports.razor"
+using Inventory_Course_.Components.Storages;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/product/create")]
     public partial class CreateProductPage : Microsoft.AspNetCore.Components.ComponentBase
     {
