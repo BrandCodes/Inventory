@@ -103,6 +103,27 @@ using Inventory_Course_.Components.Storages;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\_Imports.razor"
+using Inventory_Course_.Components.InOuts;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 1 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\InOuts\CreateInOutComponent.razor"
+using Entities;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\InOuts\CreateInOutComponent.razor"
+using Business;
+
+#line default
+#line hidden
+#nullable disable
     public partial class CreateInOutComponent : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -110,6 +131,36 @@ using Inventory_Course_.Components.Storages;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 36 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\InOuts\CreateInOutComponent.razor"
+       
+    InOutEntity oInOut = new InOutEntity();
+    List<WarehouseEntity> warehouses = new List<WarehouseEntity>();
+    List<StorageEntity> storages = new List<StorageEntity>();
+
+    string buttonValue => oInOut.IsInput ? "Registrar Entrada" : "Registrar Salida";
+
+    protected override async Task OnInitializedAsync()
+    {
+        warehouses = B_Warehouse.WarehousesList();
+    }
+
+    private void OnChangeWarehouse(ChangeEventArgs e)
+    {
+        var idWareHouse = e.Value.ToString();
+
+        storages = B_Storage.StoragesProductsByWarehouse(idWareHouse);
+    }
+
+    private void SaveInOut()
+    {
+        
+    }
+
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591

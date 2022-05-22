@@ -114,3 +114,5 @@ C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y 
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\Storages\CreateStorageComponent.razor.g.cs
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\Warehouse\ListWarehousesComponent.razor.g.cs
 C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Pages\Storage\CreateStoragePage.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\RazorDeclaration\Components\InOuts\CreateInOutComponent.razor.g.cs
+C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\obj\Debug\netcoreapp3.1\Razor\Components\InOuts\CreateInOutComponent.razor.g.cs
