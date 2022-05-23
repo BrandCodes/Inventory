@@ -132,7 +132,7 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
+#line 38 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\Products\ListProductsComponent.razor"
        
     List<ProductEntity> products = new List<ProductEntity>();
     List<ProductEntity> temProducts = new List<ProductEntity>();

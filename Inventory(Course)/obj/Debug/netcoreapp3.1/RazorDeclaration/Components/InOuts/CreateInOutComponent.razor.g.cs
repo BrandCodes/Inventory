@@ -132,12 +132,16 @@ using Business;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\InOuts\CreateInOutComponent.razor"
+#line 39 "C:\Users\Brandon\Documents\Cursos\Projects\Curso de Desarrollo Web con Blazor y dotNet\Inventory(Course)\Inventory(Course)\Components\InOuts\CreateInOutComponent.razor"
        
     InOutEntity oInOut = new InOutEntity();
+    ProductEntity oProduct = new ProductEntity();
+    StorageEntity oStorage = new StorageEntity();
+
     List<WarehouseEntity> warehouses = new List<WarehouseEntity>();
     List<StorageEntity> storages = new List<StorageEntity>();
 
+    string message;
     string buttonValue => oInOut.IsInput ? "Registrar Entrada" : "Registrar Salida";
 
     protected override async Task OnInitializedAsync()
@@ -154,7 +158,46 @@ using Business;
 
     private void SaveInOut()
     {
-        
+        oStorage = storages.LastOrDefault(s => s.StorageId == oInOut.StorageId);
+        oProduct = oStorage.Product;
+
+        if (oInOut.IsInput)
+        {
+            oStorage.PartialQuantity = oStorage.PartialQuantity + oInOut.Quantity;
+            B_Storage.UpdateStorage(oStorage);
+
+            oProduct.TotalQuantity = oProduct.TotalQuantity + oInOut.Quantity;
+            B_Product.UpdateProduct(oProduct);
+
+            message = $"El Producto {oProduct.ProductName} ha sido almacenado.";
+        }
+        else
+        {
+            if (IsBiggerThanZero(oInOut.Quantity, oStorage.PartialQuantity))
+            {
+                oStorage.PartialQuantity = oStorage.PartialQuantity - oInOut.Quantity;
+                B_Storage.UpdateStorage(oStorage);
+
+                oProduct.TotalQuantity = oProduct.TotalQuantity - oInOut.Quantity;
+                B_Product.UpdateProduct(oProduct);
+
+                message = $"El Producto {oProduct.ProductName} ha sido actualizado.";
+            }
+            else
+            {
+                message = $"No existe la cantidad suficiente en bodega para el producto {oProduct.ProductName}.";
+            }
+        }
+    }
+
+    private bool IsBiggerThanZero(int quantity, int storageQuantity)
+    {
+        if (storageQuantity > quantity)
+        {
+            return true;
+        }
+
+        return false;
     }
 
 
